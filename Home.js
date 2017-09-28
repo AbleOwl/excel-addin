@@ -1,4 +1,4 @@
-
+=
 (function () {
     "use strict";
 
@@ -11,7 +11,7 @@
         
         function openBox(){
 
-              if(Office.context.ui.displayDialogAsync!=undefined)
+              if(Office.context.ui.displayDialogAsync!==undefined)
               Office.context.ui.displayDialogAsync('https://google.com');
 
         }
