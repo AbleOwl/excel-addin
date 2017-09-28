@@ -1,4 +1,4 @@
-
+R
 (function () {
     "use strict";
 
@@ -25,7 +25,14 @@
     
       function openBox(){
 
-          Office.context.ui.displayDialogAsync('https://google.com');
-
+          Excel.run(function (context)
+                    {
+                    
+              
+              var ui=Office.context.ui;
+              ui.displayDialogAsync('https://google.com');
+              console.log("test");
+          }
+                    )
     }
 })();
