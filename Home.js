@@ -7,6 +7,14 @@
             $('#set-color').click(setColor);
               $('#open-dia').click(openBox);
         });
+        
+        
+        function openBox(){
+
+              if(Office.context.ui.displayDialogAsync!=undefined)
+              Office.context.ui.displayDialogAsync('https://google.com');
+
+        }
     };
 
     function setColor() {
@@ -23,16 +31,4 @@
         });
     }
     
-      function openBox(){
-
-          Excel.run(function (context)
-                    {
-                    
-              
-              var ui=Office.context.ui;
-              ui.displayDialogAsync('https://google.com');
-              console.log("test");
-          }
-                    )
-    }
 })();
