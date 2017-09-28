@@ -1,9 +1,11 @@
+
 (function () {
     "use strict";
 
     Office.initialize = function (reason) {
         $(document).ready(function () {
             $('#set-color').click(setColor);
+              $('#open-dia').click(openBox);
         });
     };
 
@@ -19,5 +21,11 @@
                 console.log("Debug info: " + JSON.stringify(error.debugInfo));
             }
         });
+    }
+    
+      function openBox(){
+
+          Office.context.ui.displayDialogAsync('https://google.com');
+
     }
 })();
