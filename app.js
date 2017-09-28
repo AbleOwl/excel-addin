@@ -9,7 +9,7 @@ var app = express.createServer();
 
 app.get('/', function(request, response) {
 
-    response.sendfile(__dirname + '/index.html');
+    response.sendfile(__dirname + '/Home.html');
 
 }).configure(function() {
 
