@@ -9,14 +9,8 @@
               $('#open-dia').click(openBox);
         });
         
-        
-        function openBox(){
-
-              if(Office.context.ui.displayDialogAsync!==undefined)
-              {
+     function openBox(){
               Office.context.ui.displayDialogAsync('https://google.com');
-              }
-
         }
     };
 
