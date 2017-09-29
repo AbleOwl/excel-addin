@@ -34,7 +34,7 @@
         //  var range = sheet.getRange("A1:B3").format.protection.locked = false;
            sheet.delete();
 
-            return ctx.sync();
+            return context.sync();
         }).catch(function (error) {
             console.log("Error: " + error);
             if (error instanceof OfficeExtension.Error) {
