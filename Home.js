@@ -5,7 +5,7 @@
         $(document).ready(function () {
             $('#set-color').click(setColor);
               $('#open-dia').click(openBox);
-              $('#protect').click(protect);
+                $('#delete').click(deleteSheet);
         });
         
      function openBox(){
@@ -27,12 +27,12 @@
         });
     }
     
-        function protect() {
+    function deleteSheet() {
         Excel.run(function (context) {
             var sheet = context.workbook.worksheets.getItem("Sheet1");
           //  var range = context.workbook.getSelectedRange();
-          var range = sheet.getRange("A1:B3").format.protection.locked = false;
-           sheet.protection.protect({allowInsertRows:true});
+        //  var range = sheet.getRange("A1:B3").format.protection.locked = false;
+           sheet.delete();
 
             return ctx.sync();
         }).catch(function (error) {
